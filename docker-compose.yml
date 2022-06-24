@@ -1,4 +1,10 @@
 services:
+  node:
+    image: node:16.14
+    volumes:
+      - ./application:/application
+    working_dir: /application
+
   database:
     image: postgres
     env_file:

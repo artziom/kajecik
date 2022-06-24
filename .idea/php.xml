@@ -132,6 +132,7 @@
       <path value="$PROJECT_DIR$/application/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/application/vendor/psr/container" />
       <path value="$PROJECT_DIR$/application/vendor/composer" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

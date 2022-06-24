@@ -17,3 +17,4 @@ services:
       - "80:8000"
     depends_on:
       - database
+    command: symfony serve --no-tls

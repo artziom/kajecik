@@ -44,23 +44,13 @@ final class UserFactory extends ModelFactory
 
     protected function getDefaults(): array
     {
-        return [
-            'username' => self::faker()->userName(),
-            'roles' => [],
-            'password' => self::faker()->password(),
-        ];
+        return ['username' => self::faker()->userName(), 'roles' => [], 'password' => self::faker()->password(),];
     }
 
     protected function initialize(): self
     {
-        return $this
-            ->afterInstantiate(function (User $user): void {
-                $user->setPassword(
-                    $this->passwordHasher->hashPassword(
-                        $user,
-                        $user->getPassword()
-                    )
-                );
+        return $this->afterInstantiate(function (User $user): void {
+                $user->setPassword($this->passwordHasher->hashPassword($user, $user->getPassword()));
             });
     }
 }

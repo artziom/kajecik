@@ -9,6 +9,38 @@
         <source>menu.sign_in</source>
         <target>Sign in</target>
       </trans-unit>
+      <trans-unit id="RMzQp7a" resname="app_title">
+        <source>app_title</source>
+        <target>Kajecik</target>
+      </trans-unit>
+      <trans-unit id="qjJC6L6" resname="menu.sign_out">
+        <source>menu.sign_out</source>
+        <target>Sign out</target>
+      </trans-unit>
+      <trans-unit id="EZ_OaDS" resname="menu.exit_impersonation">
+        <source>menu.exit_impersonation</source>
+        <target>Exit impersonation</target>
+      </trans-unit>
+      <trans-unit id="S92egy5" resname="title.sign_in">
+        <source>title.sign_in</source>
+        <target>Sign in</target>
+      </trans-unit>
+      <trans-unit id="LDhDPrF" resname="label.username">
+        <source>label.username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="9pvowqn" resname="label.password">
+        <source>label.password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="B0loISu" resname="label.remember_me">
+        <source>label.remember_me</source>
+        <target>Remember me</target>
+      </trans-unit>
+      <trans-unit id="z2pPSYV" resname="action.sign_in">
+        <source>action.sign_in</source>
+        <target>Sign in</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -14,13 +14,21 @@
         <div class="collapse navbar-collapse justify-content-end" id="app-navbar">
             <ul class="navbar-nav">
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class="nav-item">
+                            <a href="{{ path('admin') }}" class="nav-link bg-success px-3">
+                                <i class="fa-solid fa-user-gear"></i> {{ 'menu.admin_panel'|trans }}
+                            </a>
+                        </li>
+                    {% endif %}
+
                     <li class="nav-item">
                         <a href="{{ path('app_logout') }}" class="nav-link">{{ 'menu.sign_out'|trans }}</a>
                     </li>
                     {% if is_granted('IS_IMPERSONATOR') %}
                         <li class="nav-item">
-                            <a class="nav-link bg-danger px-3" aria-current="page"
-                               href="{{ impersonation_exit_path(path('app_homepage') ) }}">{{ 'menu.exit_impersonation'|trans }}</a>
+                            <a href="{{ impersonation_exit_path(path('app_homepage') ) }}"
+                               class="nav-link bg-danger px-3">{{ 'menu.exit_impersonation'|trans }}</a>
                         </li>
                     {% endif %}
                 {% else %}

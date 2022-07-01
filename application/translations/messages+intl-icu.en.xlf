@@ -41,6 +41,10 @@
         <source>action.sign_in</source>
         <target>Sign in</target>
       </trans-unit>
+      <trans-unit id="YGzpVfC" resname="menu.admin_panel">
+        <source>menu.admin_panel</source>
+        <target>Admin panel</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

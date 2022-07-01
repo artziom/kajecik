@@ -141,6 +141,9 @@
       <path value="$PROJECT_DIR$/application/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/lock" />
       <path value="$PROJECT_DIR$/application/vendor/symfony/rate-limiter" />
+      <path value="$PROJECT_DIR$/application/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/application/vendor/symfony/polyfill-uuid" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

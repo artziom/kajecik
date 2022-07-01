@@ -5,25 +5,21 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="c.8EJ5O" resname="menu.sign_in">
-        <source>menu.sign_in</source>
+      <trans-unit id="c.8EJ5O" resname="label.sign_in">
+        <source>label.sign_in</source>
         <target>Sign in</target>
       </trans-unit>
-      <trans-unit id="RMzQp7a" resname="app_title">
-        <source>app_title</source>
+      <trans-unit id="RMzQp7a" resname="app.name">
+        <source>app.name</source>
         <target>Kajecik</target>
       </trans-unit>
-      <trans-unit id="qjJC6L6" resname="menu.sign_out">
-        <source>menu.sign_out</source>
+      <trans-unit id="qjJC6L6" resname="label.sign_out">
+        <source>label.sign_out</source>
         <target>Sign out</target>
       </trans-unit>
-      <trans-unit id="EZ_OaDS" resname="menu.exit_impersonation">
-        <source>menu.exit_impersonation</source>
+      <trans-unit id="EZ_OaDS" resname="action.exit_impersonation">
+        <source>action.exit_impersonation</source>
         <target>Exit impersonation</target>
-      </trans-unit>
-      <trans-unit id="S92egy5" resname="title.sign_in">
-        <source>title.sign_in</source>
-        <target>Sign in</target>
       </trans-unit>
       <trans-unit id="LDhDPrF" resname="label.username">
         <source>label.username</source>
@@ -41,9 +37,29 @@
         <source>action.sign_in</source>
         <target>Sign in</target>
       </trans-unit>
-      <trans-unit id="YGzpVfC" resname="menu.admin_panel">
-        <source>menu.admin_panel</source>
+      <trans-unit id="YGzpVfC" resname="label.admin_panel">
+        <source>label.admin_panel</source>
         <target>Admin panel</target>
+      </trans-unit>
+      <trans-unit id="ID" resname="ID">
+        <source>ID</source>
+        <target>ID</target>
+      </trans-unit>
+      <trans-unit id="label.homepage" resname="label.homepage">
+        <source>label.homepage</source>
+        <target>Homepage</target>
+      </trans-unit>
+      <trans-unit id="Users" resname="Users">
+        <source>label.users</source>
+        <target>Users</target>
+      </trans-unit>
+      <trans-unit id="User" resname="User">
+        <source>User</source>
+        <target>User</target>
+      </trans-unit>
+      <trans-unit id="Username" resname="Username">
+        <source>Username</source>
+        <target>Username</target>
       </trans-unit>
     </body>
   </file>

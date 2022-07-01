@@ -9,9 +9,17 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class DashboardController extends AbstractDashboardController
 {
+    private TranslatorInterface $translator;
+
+    public function __construct(TranslatorInterface $translator)
+    {
+        $this->translator = $translator;
+    }
+
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
@@ -21,12 +29,12 @@ class DashboardController extends AbstractDashboardController
 
     public function configureDashboard(): Dashboard
     {
-        return Dashboard::new()->setTitle('Kajecik');
+        return Dashboard::new()->setTitle($this->translator->trans('app.name'));
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToRoute("Homepage", "fas fa-home", 'app_homepage');
+        yield MenuItem::linkToRoute("label.homepage", "fas fa-home", 'app_homepage');
 
         yield MenuItem::section();
         yield MenuItem::linkToCrud('Users', 'fas fa-user', User::class);

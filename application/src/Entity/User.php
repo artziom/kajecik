@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -27,6 +29,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: 'string')]
     private $password;
+
+    #[ORM\OneToMany(mappedBy: 'owner', targetEntity: Budget::class, orphanRemoval: true)]
+    private $budgets;
+
+    public function __construct()
+    {
+        $this->budgets = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -96,5 +106,35 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection<int, Budget>
+     */
+    public function getBudgets(): Collection
+    {
+        return $this->budgets;
+    }
+
+    public function addBudget(Budget $budget): self
+    {
+        if (!$this->budgets->contains($budget)) {
+            $this->budgets[] = $budget;
+            $budget->setOwner($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBudget(Budget $budget): self
+    {
+        if ($this->budgets->removeElement($budget)) {
+            // set the owning side to null (unless already changed)
+            if ($budget->getOwner() === $this) {
+                $budget->setOwner(null);
+            }
+        }
+
+        return $this;
     }
 }

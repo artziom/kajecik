@@ -61,6 +61,14 @@
         <source>Username</source>
         <target>Username</target>
       </trans-unit>
+      <trans-unit id="Created At" resname="Created At">
+        <source>Created At</source>
+        <target>Created At</target>
+      </trans-unit>
+      <trans-unit id="Updated At" resname="Updated At">
+        <source>Updated At</source>
+        <target>Updated At</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

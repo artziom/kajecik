@@ -69,6 +69,22 @@
         <source>Updated At</source>
         <target>Zmodyfikowano</target>
       </trans-unit>
+      <trans-unit id="Budgets" resname="Budgets">
+        <source>Budgets</source>
+        <target>Budżety</target>
+      </trans-unit>
+      <trans-unit id="Budget" resname="Budget">
+        <source>Budget</source>
+        <target>Budżet</target>
+      </trans-unit>
+      <trans-unit id="Name" resname="Name">
+        <source>Name</source>
+        <target>Nazwa</target>
+      </trans-unit>
+      <trans-unit id="Owner" resname="Owner">
+        <source>Owner</source>
+        <target>Właściciel</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

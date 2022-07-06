@@ -17,14 +17,11 @@ class Budget
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
-
     #[ORM\Column(type: 'string', length: 255)]
     private $name;
-
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'budgets')]
     #[ORM\JoinColumn(nullable: false)]
     private $owner;
-
     #[ORM\OneToMany(mappedBy: 'budget', targetEntity: FinancialResource::class, orphanRemoval: true)]
     private $financialResources;
 
@@ -33,9 +30,9 @@ class Budget
         $this->financialResources = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function __toString(): string
     {
-        return $this->id;
+        return $this->getName();
     }
 
     public function getName(): ?string
@@ -48,6 +45,11 @@ class Budget
         $this->name = $name;
 
         return $this;
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
     }
 
     public function getOwner(): ?User

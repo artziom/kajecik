@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Budget;
+use App\Entity\FinancialResource;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -39,6 +40,9 @@ class DashboardController extends AbstractDashboardController
 
         yield MenuItem::section();
         yield MenuItem::linkToCrud('Users', 'fas fa-user', User::class);
-        yield MenuItem::linkToCrud('Budgets', 'fas fa-user', Budget::class);
+
+        yield MenuItem::section();
+        yield MenuItem::linkToCrud('Budgets', 'fas fa-hand-holding-usd', Budget::class);
+        yield MenuItem::linkToCrud('Financial Resources', 'fas fa-wallet', FinancialResource::class);
     }
 }

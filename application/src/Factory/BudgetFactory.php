@@ -40,7 +40,7 @@ final class BudgetFactory extends ModelFactory
 
     protected function getDefaults(): array
     {
-        return ['name' => self::faker()->text()];
+        return ['name' => self::faker()->words(3, true)];
     }
 
     protected function initialize(): self

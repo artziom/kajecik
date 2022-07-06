@@ -85,6 +85,22 @@
         <source>Owner</source>
         <target>Owner</target>
       </trans-unit>
+      <trans-unit id="FinancialResource" resname="FinancialResource">
+        <source>FinancialResource</source>
+        <target>Financial Resource</target>
+      </trans-unit>
+      <trans-unit id="Financial Resources" resname="Financial Resources">
+        <source>Financial Resources</source>
+        <target>Financial Resources</target>
+      </trans-unit>
+      <trans-unit id="Amount" resname="Amount">
+        <source>Amount</source>
+        <target>Amount</target>
+      </trans-unit>
+      <trans-unit id="Active" resname="Active">
+        <source>Active</source>
+        <target>Active</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
